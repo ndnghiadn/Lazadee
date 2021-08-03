@@ -2,7 +2,7 @@
   "name": "blog",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "src/app.js",
   "scripts": {
     "start": "nodemon --inspect src/app.js",
     "watch": "node-sass -w src/resources/scss/ -o src/public/css/",
