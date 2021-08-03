@@ -1,0 +1,24 @@
+<form action="" method="POST">
+    <label for="id">id: </label>
+    <input type="text" value="{{this.product.id}}" name="id" readonly> <br />
+    <label for="name">Name: </label>
+<input id="name" type="text" value="{{this.product.name}}" name="name"><br />
+<label for="category">Category: </label>
+<select id="category" name="category">
+    {{#each this.list}}
+        <option value="{{id}}">{{name}}</option>
+    {{/each}}
+</select><br />
+<label for="price">Price: </label>
+<input id="price" type="text" value="{{this.product.price}}" name="price"><br />
+    <label for="prePrice">prePrice: </label>
+    <input id="prePrice" type="text" value="{{this.product.prePrice}}" name="prePrice"><br />
+<label for="imageUrl">Image Url: </label>
+<input id="imageUrl" type="text" value="{{this.product.imageUrl}}" name="imageUrl"><br />
+<label for="isSale">Sale?</label>
+<select id="isSale" name="isSale">
+    <option value="1">true</option>
+    <option value="0">false</option>
+</select><br />
+<button type="submit">Save</button>
+</form>

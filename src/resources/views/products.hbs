@@ -1,0 +1,112 @@
+<div class="nav-item">
+            <div class="container">
+                <div class="nav-depart">
+                    <div class="depart-btn">
+                        <i class="ti-menu"></i>
+                        <span>All categories</span>
+                        <ul class="depart-hover">
+                            <li><a href="#">Thời Trang Nam</a></li>
+                            <li><a href="#">Điện Thoại & Phụ Kiện</a></li>
+                            <li><a href="#">Thiết Bị Điện Tử</a></li>
+                            <li><a href="#">Máy Tính & Laptop</a></li>
+                            <li><a href="#">Giày Dép</a></li>
+                            <li><a href="#">Thời Trang Nữ</a></li>
+                            <li><a href="#">Mẹ & Bé</a></li>
+                            <li><a href="#">Nhà Sách Online</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <nav class="nav-menu mobile-menu">
+                    <ul>
+                        <li><a href="./">Home</a></li>
+                        <li class="active"><a href="./products">Product</a></li>
+                        <li><a href="./blogs">Blog</a></li>
+                        <li><a href="./contact">Contact</a></li>
+                        <li><a href="./faqs">FAQ</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div id="mobile-menu-wrap"></div>
+            </div>
+</div>
+
+<!-- Breadcrumb Section Begin -->
+    <div class="breacrumb-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumb-text">
+                        <a href="#"><i class="fa fa-home"></i> Home</a>
+                        <span>Product</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Breadcrumb Section Begin -->
+
+    <!-- Product Shop Section Begin -->
+    <section class="product-shop spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 order-1 order-lg-2">
+                    <div class="product-show-option">
+                        <div class="row">
+                            <div class="col-lg-7 col-md-7">
+                                <div class="select-option">
+                                    <select class="sorting">
+                                        <option value="">default</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-list">
+                        <div class="row">
+                            
+                            {{#each this.list}}
+                                <div class="col-lg-4 col-sm-6">
+                                <div class="product-item">
+                                    <div class="pi-pic">
+                                        <img src="{{imageUrl}}" alt="">
+                                        {{#if isSale}}
+                                            <div class="sale pp-sale">Sale</div>
+                                        {{/if}}
+                                        <div class="icon">
+                                            <i class="icon_heart_alt"></i>
+                                        </div>
+                                        <ul>
+                                            <li class="w-icon active"><a href="#"><i class="icon_bag_alt"></i></a></li>
+                                            <li class="quick-view"><a href="#">+ Quick View</a></li>
+                                            <li class="w-icon"><a href="#"><i class="fa fa-random"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="pi-text">
+                                        <div class="catagory-name">{{catName}}</div>
+                                        <a href="#">
+                                            <h5>{{name}}</h5>
+                                        </a>
+                                        <div class="product-price">
+                                            ${{price}}
+                                            {{#if isSale}}
+                                                <span>${{prePrice}}</span>
+                                            {{/if}}
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                            {{/each}}
+                            
+                        </div>
+                    </div>
+                    {{!-- <div class="loading-more">
+                        <i class="icon_loading"></i>
+                        <a href="#">
+                            Loading More
+                        </a>
+                    </div> --}}
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Product Shop Section End -->
